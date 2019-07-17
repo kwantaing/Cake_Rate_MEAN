@@ -1,0 +1,59 @@
+.right{
+    width:45%;
+    height:750px;
+    padding:25px;
+    overflow-y: auto;
+    display:inline-block;
+    border:2px solid blue;
+    margin: 0 1.5%;
+}
+.left{
+    vertical-align:top;
+    width:45%;
+    display:inline-block;
+    border: 2px solid orange;
+    padding: 25px;;
+    margin-bottom:25px;
+}
+.cake{
+    background-color:peachpuff;
+    margin:5px;
+    border:2px solid #eee;
+    height:30%;
+    padding: 2%;
+    text-align:left;
+    position:relative;
+}
+.img{
+    text-align:center;
+    height: 100%;
+    width:45%;
+}
+.img img{
+    height:100%;
+    max-width: 100%;
+}
+.rate{
+    position:absolute;
+    top:5%;
+    right:5%;
+    display:inline-block;
+    vertical-align:top;
+    width:40%;
+}
+select{
+    width:80%;
+    margin:2%;
+}
+textarea{
+    width:100%;
+    height:100px;
+}
+.detail{
+    border:2px solid pink;
+}
+.form{
+    border:2px solid red;
+    margin:25px;
+    padding:10px;
+}

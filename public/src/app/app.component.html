@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1> Rate my Cakes</h1> 
+  <div class="left">
+    <div class="form">
+      <form (submit)="onSubmit()">
+        <h3>Add a new Cake!</h3>
+        <label for="baker">Baker Name:</label>
+        <input type="text" name="newCake.baker" [(ngModel)]="newCake.baker" />
+        <label for="imageUrl">Image Url:</label>
+        <input type="text" name="newCake.imageUrl" [(ngModel)]="newCake.imageUrl" />
+        <button>Submit</button>
+      </form>
+    </div>
+      <app-detail *ngIf="selectedCake" [selectOne]="selectedCake"></app-detail>
+  </div>
+  <div class="right">
+    <div class="cake" *ngFor="let cake of cakes">
+      <div class="img">
+        <img src="{{cake.imageUrl}}" alt="" (click)="onSelect(cake._id)">
+      </div>
+      <div class="rate">
+        <form (submit)="addRating(cake._id,newRating)">
+          <label for="">Rating: </label>
+          <select name="newRating.rating" [(ngModel)]="newRating.rating" >
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+          <label for="comment">Comment:</label>
+          <textarea name="newRating.comment" [(ngModel)]="newRating.comment"></textarea>
+          <button>Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<router-outlet></router-outlet>

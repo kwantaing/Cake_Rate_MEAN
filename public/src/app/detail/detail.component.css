@@ -1,0 +1,10 @@
+.detail{
+    border:2px solid green;
+    padding:2%;
+    max-height:560px;
+    overflow-y: auto;
+}
+img{
+    max-height:350px;
+    max-width:100%;
+}
