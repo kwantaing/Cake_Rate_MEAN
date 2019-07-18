@@ -2,6 +2,6 @@
     <img src="{{selectOne.imageUrl}}" alt="">
     <h4>Baked By: {{selectOne.baker}}</h4>
     <hr>
-    <h4>Average Rating: {{averageRating}}</h4>
+    <h4>Average Rating: {{getAvg(selectOne)}}</h4>
     <h5 *ngFor="let comment of selectOne.comments">{{comment.comment}}<br>{{comment.rating}} stars</h5>
 </div>

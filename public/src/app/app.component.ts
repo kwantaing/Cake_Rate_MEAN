@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpService } from './http.service';
+import { DetailComponent } from './detail/detail.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  constructor(private _httpService: HttpService){}
+export class AppComponent implements OnInit {
+  constructor(private _httpService: HttpService){
+  }
   newCake: Object;
   cakes :any;
   selectedCake: any;
   newRating: any;
-
   ngOnInit(){
     this.newCake = {baker:"", imageUrl:""}
     this.newRating = {rating:5, comment:""}

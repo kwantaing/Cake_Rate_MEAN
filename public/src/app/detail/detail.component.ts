@@ -12,7 +12,7 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.getAvg(this.selectOne);
   }
-  getAvg(selectOne): void{
+  getAvg(selectOne){
     console.log("in getavg", selectOne)
     var sum=0;
     for(let comment of selectOne.comments){
@@ -23,5 +23,7 @@ export class DetailComponent implements OnInit {
     }else{
       this.averageRating = "0";
     }
+    console.log(this.averageRating)
+    return this.averageRating
   }
 }
